@@ -8,8 +8,6 @@ builder.Services.AddDbContext<BooksContext>(
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-
 app.MapGet(
     "/books",
     async (BooksContext db) =>
